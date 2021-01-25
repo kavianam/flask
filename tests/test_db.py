@@ -13,9 +13,8 @@ def test_get_close_db(app):
         db.execute('SELECT 1')
 
     assert 'closed' in str(e.value)
-The init-db command should call the init_db function and output a message.
 
-tests/test_db.py
+
 def test_init_db_command(runner, monkeypatch):
     class Recorder(object):
         called = False
